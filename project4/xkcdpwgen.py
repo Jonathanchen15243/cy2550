@@ -16,11 +16,6 @@ def parse_arguments():
 
 
 def main(args):
-    print("num words:", args.words)
-    print("num caps:", args.caps)
-    print("num numbers:", args.numbers)
-    print("num symbols:", args.symbols)
-
     words = open("words.txt", "r").read().split("\n")[:-1]
     chosen_words = random.choices(words, k=args.words)
 
@@ -35,8 +30,6 @@ def main(args):
 
     for index in caps_words:
         chosen_words[index] = chosen_words[index][0].upper() + chosen_words[index][1:]
-
-    print(chosen_words)
 
     password = []
     for word in chosen_words:
