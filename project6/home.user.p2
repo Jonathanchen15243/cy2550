@@ -1,0 +1,19 @@
+# Last Modified: Wed Nov 16 08:09:37 2022
+abi <abi/3.0>,
+include <tunables/global>
+/home/jonchen15243/p2 flags=(audit) {
+  include <abstractions/base>
+  /home/jonchen15243/p2 mr,
+  /home/jonchen15243/.project2/* rw,
+  /tmp/* rw,
+  /var/log/syslog rw,
+  /etc/fstab rw,
+  /proc/version rw,
+  /proc/buddyinfo rw,
+  /etc/crontab rw,
+  /run/systemd/resolve/stub-resolv.conf rw,
+  /etc/passwd rw,
+  /etc/hosts rw,
+  /home/jonchen15243/template rw,
+  network tcp,
+}
